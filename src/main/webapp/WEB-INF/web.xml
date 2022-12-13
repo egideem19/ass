@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>assur</display-name>
+  <welcome-file-list>
+    
+    <welcome-file>index.jsp</welcome-file>
+    
+  </welcome-file-list>
+    
+   <servlet>
+    <servlet-name>LoginSv</servlet-name>
+    <servlet-class>open.registrer.LoginSv</servlet-class>
+     
+    
+  </servlet>
+  
+   <servlet-mapping>
+    <servlet-name>LoginSv</servlet-name>
+    <url-pattern>/LoginSv</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>registrerServelt</servlet-name>
+    <servlet-class>open.registrer.registrerServelt</servlet-class>
+    
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>registrerServelt</servlet-name>
+    <url-pattern>/registrerServelt</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>open.registrer.logout</servlet-class>
+   
+  </servlet>
+  
+   <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  
+   
+  <servlet>
+  	<servlet-name>MutuelleServlet</servlet-name>
+  	<servlet-class>openassu.management.web.MutuelleServlet</servlet-class>
+  </servlet>
+  
+ <servlet-mapping>
+  	<servlet-name>MutuelleServlet</servlet-name>
+  	<url-pattern>/newM</url-pattern>
+  	<url-pattern>/insertM</url-pattern>
+  	<url-pattern>/deleteM</url-pattern>
+  	<url-pattern>/editM</url-pattern>
+  	<url-pattern>/updateM</url-pattern>
+  	<url-pattern>/listM</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>AssuranceServlet</servlet-name>
+  	<servlet-class>openassu.management.web.AssuranceServlet</servlet-class>
+  </servlet>
+  
+ <servlet-mapping>
+  	<servlet-name>AssuranceServlet</servlet-name>
+  	<url-pattern>/newA</url-pattern>
+  	<url-pattern>/insertA</url-pattern>
+  	<url-pattern>/deleteA</url-pattern>
+  	<url-pattern>/editA</url-pattern>
+  	<url-pattern>/updateA</url-pattern>
+  	<url-pattern>/listA</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>ClientServlet</servlet-name>
+  	<servlet-class>openassu.management.web.ClientServlet</servlet-class>
+  </servlet>
+  
+ <servlet-mapping>
+  	<servlet-name>ClientServlet</servlet-name>
+  	<url-pattern>/new</url-pattern>
+  	<url-pattern>/insert</url-pattern>
+  	<url-pattern>/delete</url-pattern>
+  	<url-pattern>/edit</url-pattern>
+  	<url-pattern>/update</url-pattern>
+  	<url-pattern>/list</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  	<servlet-name>UserServlet</servlet-name>
+  	<servlet-class>openassu.management.web.UserServlet</servlet-class>
+  </servlet>
+  
+ <servlet-mapping>
+  	<servlet-name>UserServlet</servlet-name>
+  	<url-pattern>/newU</url-pattern>
+  	<url-pattern>/insertU</url-pattern>
+  	<url-pattern>/deleteU</url-pattern>
+  	<url-pattern>/editU</url-pattern>
+  	<url-pattern>/updateU</url-pattern>
+  	<url-pattern>/listU</url-pattern>
+  </servlet-mapping>
+  
+  
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  
+  <error-page>
+  		<exception-type>java.lang.Exception</exception-type>
+  		<location>/error.jsp</location>
+  
+  </error-page>
+
+  
+  
+  
+  
+  
+</web-app>
